@@ -1,0 +1,29 @@
+void setup()
+{
+	pinMode(2,OUTPUT);
+  	pinMode(3,OUTPUT);
+}
+
+void loop()
+{
+    int i=0,l=analogRead(A0);
+  if (l>=500)
+  {
+    tone(0,4000);
+    delay(1000);
+    digitalWrite(2,HIGH);
+    delay(100);
+    digitalWrite(2,LOW);
+    delay(100);
+    digitalWrite(3,HIGH);
+    delay(100);
+    digitalWrite(3,LOW);
+    delay(100);
+  }
+  else
+  	{	
+    noTone(0);
+	  digitalWrite(2,LOW);
+  	digitalWrite(3,LOW);
+  	}
+}
